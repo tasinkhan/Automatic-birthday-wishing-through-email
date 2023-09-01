@@ -3,7 +3,6 @@ from rest_framework.viewsets import ModelViewSet
 from .serializers import CustomerSerializer
 from .models import Customer
 
-
 # Create your views here.
 
 class CustomerAPI(ModelViewSet):
@@ -12,3 +11,4 @@ class CustomerAPI(ModelViewSet):
     """
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
+
