@@ -1,0 +1,50 @@
+version: '3.7'
+
+services:
+
+  django:
+    container_name: django
+    build: .
+    command: '/home/app/entrypoint.sh'
+    volumes:
+      - .:/home/app
+      # - db-data:/var/www/app/db-data
+    ports:
+      - "8000:8000"
+    
+    environment:
+      - DJANGO_DB_FILE=/home/app/db.sqlite3
+    depends_on:
+      - redis
+
+  redis:
+    container_name: redis
+    image: redis  
+    ports:
+      - "6379:6379"
+
+  celery-worker:
+    build: .
+    container_name: celery-worker
+    command: celery -A automated_birthday_wishing worker -l info
+    volumes:
+    - .:/home/app
+    depends_on:
+    - django
+    - redis
+
+  celery-beat:
+    build: .
+    # context: ./app
+    container_name: celery-beat
+    # entrypoint: celery
+    command: celery -A automated_birthday_wishing beat -l info
+    volumes:
+    - .:/home/app
+    depends_on:
+    - django
+    - celery-worker
+    - redis
+
+# volumes:
+#   data_volume:  
