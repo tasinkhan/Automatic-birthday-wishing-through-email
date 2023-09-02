@@ -16,15 +16,15 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 # Load task modules from all registered Django apps.
 app.autodiscover_tasks()
 
-app.conf.beat_schedule = {
-    #Scheduler Name
-    'send_birthday_wish_mail': {
-        # Task Name (Name Specified in Decorator)
-        'task': 'send_birthday_wish_mail',  
-        # Schedule      
-        'schedule': 10,
-        # Function Arguments 
-        # 'args': (10,20) 
-    },
-}  
+
+# Manual periodic task scheduling
+# app.conf.beat_schedule = {
+#     #Scheduler Name
+#     'send_birthday_wish_mail': {
+#         # Task Name (Name Specified in Decorator)
+#         'task': 'send_birthday_wish_mail',  
+#         # Schedule      
+#         'schedule': crontab(),
+#     },
+# }  
 
