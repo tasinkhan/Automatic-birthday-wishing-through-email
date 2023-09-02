@@ -10,10 +10,10 @@ Integrated Redis for task queue management.
 # Prerequisites
 Before getting started, make sure you have the following prerequisites:
 
-Python 3.10 or above installed on your system.
-Django and other required packages installed (see requirements.txt).
-Docker for running the project.
-    Docker is used for flexibility through all Operating system. like windows does not support Redis officially. Docker can overcome this kind of issue.
+- Python 3.10 or above installed on your system.
+- Django and other required packages installed (see requirements.txt).
+- Docker for running the project.
+- Docker is used for flexibility through all Operating system. like windows does not support Redis officially. Docker can overcome this kind of issue.
 
 # Installation
 Clone the repository:
@@ -25,8 +25,8 @@ docker-compose up --build -d
 
 This command will run django, redis, celery worker, celery beat as separate containers
 
-go to http:127.0.0.1:8000/customer/ to see the list of the customers and entry a new customer.
+- go to http:127.0.0.1:8000/customer/ to see the list of the customers and entry a new customer.
 
-go to http:127.0.0.1:8000/customer/{id}/ to see details of a customer and edit the informations of a customer
+- go to http:127.0.0.1:8000/customer/{id}/ to see details of a customer and edit the informations of a customer
 
-go to http:127.0.0.1:8000/admin/ and click on 'Periodic tasks' under 'PERIODIC TASKS' then select 'send_autmomatic_birthday_wish_mail' > Crontab Schedule> then choose which scheduler you want to use.
+- go to http:127.0.0.1:8000/admin/ and click on 'Periodic tasks' under 'PERIODIC TASKS' then select 'send_autmomatic_birthday_wish_mail' > Crontab Schedule> then choose which scheduler you want to use.
