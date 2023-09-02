@@ -21,13 +21,15 @@ Clone the repository:
 git clone https://github.com/tasinkhan/Automatic-birthday-wishing-through-email.git
 
 navigate to the folder and run docker-compose file:
-docker-compose up --build -d
+- docker-compose up --build -d 
 
-This command will run django, redis, celery worker, celery beat as separate containers.
+- docker-compose up --build (if want to see the logs without detached mode)
 
-- go to http:127.0.0.1:8000/customer/ to see the list of the customers and entry a new customer.
+This command will run django, redis, celery worker, celery beat in separate containers.
 
-- go to http:127.0.0.1:8000/customer/{id}/ to see details of a customer and edit the informations of a customer.
+- go to http:127.0.0.1:8000/customer/ to see the list of the customers or to insert a new customer.
+
+- go to http:127.0.0.1:8000/customer/{id}/ to see details of a customer or edit the informations of a customer.
 
 - go to http:127.0.0.1:8000/admin/ to access the django admin interface.
 

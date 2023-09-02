@@ -8,7 +8,6 @@ services:
     command: '/home/app/entrypoint.sh'
     volumes:
       - .:/home/app
-      # - db-data:/var/www/app/db-data
     ports:
       - "8000:8000"
     
@@ -45,6 +44,3 @@ services:
     - django
     - celery-worker
     - redis
-
-# volumes:
-#   data_volume:  
