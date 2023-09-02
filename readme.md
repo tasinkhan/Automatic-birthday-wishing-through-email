@@ -1,13 +1,13 @@
-Overview
+# Overview
 The Automatic Birthday Wish Mailer is a Python-based web application built using Django Rest Framework (DRF), Celery, and Redis. It allows you to schedule and send automatic email wishes for birthdays. 
 
-Features
+## Features
 User-friendly web API interface and Django Admin interface to insert Customer Informations.
 Asynchronous email sending using Celery to ensure performance and scalability.
 Supports various scheduling options (daily, weekly, monthly) for wishes.
 Integrated Redis for task queue management.
 
-Prerequisites
+# Prerequisites
 Before getting started, make sure you have the following prerequisites:
 
 Python 3.10 or above installed on your system.
@@ -15,10 +15,10 @@ Django and other required packages installed (see requirements.txt).
 Docker for running the project.
     Docker is used for flexibility through all Operating system. like windows does not support Redis officially. Docker can overcome this kind of issue.
 
-Installation
+# Installation
 Clone the repository:
 
-git clone https://github.com/your-username/automatic-wish-mailer.git
+git clone https://github.com/tasinkhan/Automatic-birthday-wishing-through-email.git
 
 navigate to the folder and run docker-compose file:
 docker-compose up --build -d
