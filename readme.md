@@ -2,10 +2,10 @@
 The Automatic Birthday Wish Mailer is a Python-based web application built using Django Rest Framework (DRF), Celery, and Redis. It allows you to schedule and send automatic email wishes for birthdays. 
 
 ## Features
-User-friendly web API interface and Django Admin interface to insert Customer Informations.
-Asynchronous email sending using Celery to ensure performance and scalability.
-Supports various scheduling options (daily, weekly, monthly) for wishes.
-Integrated Redis for task queue management.
+- User-friendly web API interface and Django Admin interface to insert Customer Informations.
+- Asynchronous email sending using Celery to ensure performance and scalability.
+- Supports various scheduling options (daily, weekly, monthly) for wishes.
+- Integrated Redis for task queue management.
 
 # Prerequisites
 Before getting started, make sure you have the following prerequisites:
