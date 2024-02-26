@@ -16,3 +16,5 @@ RUN pip install -r requirements.txt
 COPY . .
 
 EXPOSE 8000
+
+# This is a comment from github direct vscode access
